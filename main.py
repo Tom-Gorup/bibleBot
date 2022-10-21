@@ -47,6 +47,8 @@ async def verse(ctx, *, verse: str):
     must be listed and being sold there for me to provide the value. Looking to add more exchanges soon!"""
     bible = Bible()
     passage = bible.get_esv_text(verse)
+    if len(passage) > 4000:
+        passage = "Try breaking out into a smaller set of verses."
 
     await ctx.send(passage)
 
