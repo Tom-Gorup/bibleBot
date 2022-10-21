@@ -48,7 +48,7 @@ async def verse(ctx, *, verse: str):
     bible = Bible()
     passage = bible.get_esv_text(verse)
     if len(passage) > 4000:
-        passage = "Try breaking out into a smaller set of verses."
+        passage = "I can't get those verses for you due to Discord character limits. Try breaking out into a smaller set of verses."
 
     await ctx.send(passage)
 
